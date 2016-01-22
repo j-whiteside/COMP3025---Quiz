@@ -25,14 +25,30 @@ class ViewController: UIViewController {
     
     var currentQuestionIndex: Int = 0
     
+    override func viewDidLoad() {
+        questionLabel.text = questions[currentQuestionIndex]
+        
+    }
+    
     @IBAction func nextQuestion(sender: AnyObject) {
         
-        questionLabel.text = "Yes, Ben is gay"
-        nextQuestionButton.setTitle("Clicked", forState: .Normal)
+        ++currentQuestionIndex
+        
+        if currentQuestionIndex == questions.count {
+            currentQuestionIndex = 0
+        }
+        
+        let question: String = questions[currentQuestionIndex]
+        questionLabel.text = question
+        answerLabel.text = "???"
+        
         
     }
     
     @IBAction func showAnswer(sender: UIButton) {
+        
+        let answer: String = answers[currentQuestionIndex]
+        answerLabel.text = answer
     }
 
 
