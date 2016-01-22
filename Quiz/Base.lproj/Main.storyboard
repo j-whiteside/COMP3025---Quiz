@@ -20,23 +20,29 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="????" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aHI-MC-8X1">
                                 <rect key="frame" x="283" y="289" width="34" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="puE-mc-unP">
-                                <rect key="frame" x="251" y="57" width="98" height="30"/>
-                                <state key="normal" title="Next Question"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7D2-oA-Hap">
-                                <rect key="frame" x="255" y="330" width="91" height="30"/>
-                                <state key="normal" title="Show answer"/>
+                                <rect key="frame" x="261" y="57" width="78" height="30"/>
+                                <state key="normal" title="Is Ben gay?"/>
+                                <connections>
+                                    <action selector="nextQuestion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mHT-2z-VfS"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="????" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HAB-kn-yN0">
                                 <rect key="frame" x="283" y="28" width="34" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7D2-oA-Hap">
+                                <rect key="frame" x="255" y="330" width="91" height="30"/>
+                                <state key="normal" title="Show answer"/>
+                                <connections>
+                                    <action selector="showAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aN0-qd-T3l"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -50,6 +56,12 @@
                             <constraint firstItem="puE-mc-unP" firstAttribute="top" secondItem="HAB-kn-yN0" secondAttribute="bottom" constant="8" id="rab-cP-fvu"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="answerLabel" destination="aHI-MC-8X1" id="BF0-8p-Sef"/>
+                        <outlet property="nextQuestionButton" destination="puE-mc-unP" id="sSD-Ca-pcu"/>
+                        <outlet property="questionLabel" destination="HAB-kn-yN0" id="Xim-Q5-8Br"/>
+                        <outlet property="showAnswerButton" destination="7D2-oA-Hap" id="nNn-bM-zeO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
